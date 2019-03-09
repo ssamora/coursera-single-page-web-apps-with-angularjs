@@ -1,0 +1,7 @@
+<h1>({{ catItemsController.category.category.short_name }}) {{ catItemsController.category.category.name }}</h1>
+<ul>
+    <li ng-repeat="item in catItemsController.category.menu_items">
+            ({{ item.short_name }}) {{ item.name }}
+          </a>
+    </li>
+</ul>
