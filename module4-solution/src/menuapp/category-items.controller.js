@@ -8,7 +8,7 @@
     CategoryItemsController.$inject = ['category']
     function CategoryItemsController(category) {
       var catItemController = this;
-      catItemController.category = category.data;
+      catItemController.category = category;
     }
     
 })();
