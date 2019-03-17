@@ -1,0 +1,15 @@
+<div class="container">
+    <h1 ng-if="!regCtrl.isRegComplete()">Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></h1>
+
+
+    <div ng-if="regCtrl.isRegComplete()">
+    <h1>Registered Info for {{ regCtrl.getRegUser().firstname }} {{ regCtrl.getRegUser().lastname }}</h1>
+    <h2>{{ regCtrl.getRegUser().email }}</h2>
+    <h2>{{ regCtrl.getRegUser().phone }}</h2>
+    <h2>Favorite Menu</h2>
+    <div>{{regCtrl.getFavMenu().name}}</div>
+    <div>{{regCtrl.getFavMenu().description}}</div>
+    <img class="img-responsive" width="250" height="150" ng-src="{{regCtrl.apipath}}/images/{{regCtrl.getFavMenu().short_name}}.jpg" alt="{{regCtrl.getFavMenu().name}}">
+    </div>
+
+</div>
